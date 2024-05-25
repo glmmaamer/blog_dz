@@ -1,0 +1,23 @@
+{% extends 'blog/home.html' %}
+{% load static %}
+
+{% block content %}
+<div class="login p-4 mt-5 bg-white text-black">
+    <h3 class="border-bottom mb-4 mt-2"> تسجيل الدخول </h3>
+
+    <form  method="POST" class="text-black">
+        {% csrf_token %}
+        <div class=" form-group mb-2">
+            <label for="username">إسم المستخدم</label>
+            <input type="text" name="username" id="username" placeholder="اسم المستخدم" class="form-control">
+        </div>
+        <div class="form-groub mb-5">
+            <label for="password">كلمة السر</label>
+            <input type="password" name="password" id="password" placeholder="كلمة السر" class="form-control">
+        </div>
+
+        <input class="btn btn-primary mb-4" type="submit" value="تسجيل الدخول">
+    </form>
+</div>
+
+{% endblock %}

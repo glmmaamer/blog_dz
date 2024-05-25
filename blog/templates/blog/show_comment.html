@@ -1,0 +1,16 @@
+<ul  class="list-groub-flush ">
+    {% for commant in show_comments %}
+    <li class="list-groub-item ">
+        <a href="#" class="text-dark">
+            {% if commant.body|length > 20 %}
+            {{ commant.body|slice:'30' }}..
+            {% else %}
+            {{commant.body }}
+            {% endif %}
+        </a>
+    </li>
+    {% empty %}
+    <h3>لايوجد تعليقات</h3>
+    {% endfor %}
+    
+</ul>
