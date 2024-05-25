@@ -1,0 +1,1 @@
+web: gunicor myproject.wsgi 
